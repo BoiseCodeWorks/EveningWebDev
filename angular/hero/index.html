@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Component Example</title>
+</head>
+
+<body ng-app="heroApp">
+	<div ng-controller="heroController as hc">
+		<input type="text" ng-model="hc.hero"><br><br>
+		<hero-detail hero="hc.hero"></hero-detail>
+	</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script>
+		var app = angular.module('heroApp', []);
+
+		app.controller('heroController', HeroController);
+
+		app.component('heroDetail', {
+			bindings: {
+				hero: '<'
+			},
+			template: '<span><b>Hero</b>: {{ hd.hero }}</span>',
+			controller: HeroDetail,
+			controllerAs: 'hd'
+		});
+
+		HeroController.$inject = [];
+		HeroDetail.$inject = [];
+
+		function HeroController() {
+
+			var hc= this;
+			
+			hc.hero = 'Batman';
+		}
+
+		function HeroDetail() {
+
+		}
+	</script>
+</body>
+
+</html>
