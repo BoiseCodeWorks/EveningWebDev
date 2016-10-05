@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Component Example</title>
+</head>
+
+<body ng-app="heroApp">
+	<div ng-controller="heroController as hc">
+		<hero-list heroes="hc.heroes"></hero-list>
+	</div>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script src="app.js"></script>
+	<script src="heroList.js"></script>
+	<script src="heroDetail.js"></script>
+</body>
+
+</html>
