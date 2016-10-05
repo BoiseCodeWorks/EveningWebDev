@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Example</title>
+</head>
+
+<body ng-app="spicyApp1">
+	<div ng-controller="SpicyController">
+		<button ng-click="setSpice('chili')">Chili</button>
+		<button ng-click="setSpice('jalepeno')">Jalapeño</button>
+		<p>The food is {{spice}} spicy!</p>
+	</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script src="app.js"></script>
+</body>
+
+</html>
